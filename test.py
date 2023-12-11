@@ -37,6 +37,9 @@ for item in data:
         new_data = [{str(key): item} for item in temp_data]
         print(json.dumps(new_data))
 
+with open("test.json", "w") as file:
+    json.dump(new_data,file, indent=2)
+
 # Save the updated data set to a new JSON file
 with open("updated_data.json", "w") as file:
     json.dump(data, file, indent=2)
